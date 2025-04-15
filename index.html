@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>ATS Resume - Why Choose Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,124 +10,161 @@
     <!-- Import Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Custom styles */
-      body {
-        font-family: 'Inter', sans-serif;
-      }
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
     </style>
     <link rel="stylesheet" href="input.css">
-  </head>
-  <body class="bg-white">
+</head>
+
+<body class="bg-white">
     <!-- Header Navigation -->
     <header class="w-full h-[87px] bg-white shadow-md">
-      <div class="max-w-[1440px] mx-auto px-4 md:px-12 h-full flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center">
-          <div class="font-bold text-[#032433] text-2xl tracking-[0.24px] leading-[39.8px]">
-            ATS RESUME
-          </div>
-          <img class="w-[29px] h-[29px] ml-2" alt="Logo icon" src="/vector-6.svg" />
+        <div class="max-w-[1440px] mx-auto px-4 md:px-12 h-full flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="font-bold text-[#032433] text-2xl tracking-[0.24px] leading-[39.8px]">
+                    ATS RESUME
+                </div>
+                <img class="w-[29px] h-[29px] ml-2 flex mb-10" alt="Logo icon" src="/assets/PenLogo.png" />
+            </div>
+
+            <!-- Navigation Menu - Hidden on mobile, visible on desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">Home</a>
+                <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">About Us</a>
+                <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">Our Services</a>
+                <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">Pricing</a>
+                <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">FAQ</a>
+            </nav>
+
+            <!-- Mobile Menu Button - Visible on mobile only -->
+            <button id="menuButton" class="md:hidden text-[#032433] z-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu"
+                class="md:hidden fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+                <div class="flex justify-end p-4">
+                    <button id="closeMenu" class="text-[#032433]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col px-6 space-y-6">
+                    <a href="#" class="font-semibold text-[#032433] text-lg">Home</a>
+                    <a href="#" class="font-semibold text-[#032433] text-lg">About Us</a>
+                    <a href="#" class="font-semibold text-[#032433] text-lg">Our Services</a>
+                    <a href="#" class="font-semibold text-[#032433] text-lg">Pricing</a>
+                    <a href="#" class="font-semibold text-[#032433] text-lg">FAQ</a>
+                </div>
+            </div>
+
+
+            <!-- Action Buttons - Hidden on mobile, visible on desktop -->
+            <div class="hidden md:flex items-center space-x-5">
+                <a href="#"
+                    class="h-[43px] px-6 rounded-[31px] border border-[#032433] text-[#032433] font-medium text-[15px] flex items-center">
+                    Why Choose Us
+                </a>
+                <a href="#"
+                    class="h-[43px] px-6 rounded-[31px] bg-[#032433] text-white font-semibold text-[15px] flex items-center">
+                    Contact
+                </a>
+            </div>
         </div>
-
-        <!-- Navigation Menu - Hidden on mobile, visible on desktop -->
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">Home</a>
-          <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">About Us</a>
-          <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">Our Services</a>
-          <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">Pricing</a>
-          <a href="#" class="font-semibold text-[15px] tracking-[0.60px] text-[#7e75a7]">FAQ</a>
-        </nav>
-
-        <!-- Mobile Menu Button - Visible on mobile only -->
-        <button class="md:hidden text-[#032433]">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-
-        <!-- Action Buttons - Hidden on mobile, visible on desktop -->
-        <div class="hidden md:flex items-center space-x-5">
-          <a href="#" class="h-[43px] px-6 rounded-[31px] border border-[#032433] text-[#032433] font-medium text-[15px] flex items-center">
-            Why Choose Us
-          </a>
-          <a href="#" class="h-[43px] px-6 rounded-[31px] bg-[#032433] text-white font-semibold text-[15px] flex items-center">
-            Contact
-          </a>
-        </div>
-      </div>
     </header>
 
     <!-- Hero Section with Background Pattern -->
     <section class="w-full h-[183px] relative">
-      <img class="w-full h-[165px] object-cover" alt="Background pattern" src="/frame-3.svg" />
-      <div class="max-w-[1440px] mx-auto px-4 md:px-12 relative">
-        <h1 class="text-center font-semibold text-[#032433] text-3xl md:text-[43px] tracking-[1.72px] pt-11">
-          Why Choose Us
-        </h1>
+        <img class="w-full h-[165px] object-cover" alt="Background pattern" src="/frame-3.svg" />
+        <div class="max-w-[1440px] mx-auto px-4 md:px-12 relative">
+            <h1 class="text-center font-semibold text-[#032433] text-3xl md:text-[43px] tracking-[1.72px] pt-11">
+                Why Choose Us
+            </h1>
 
-        <!-- Breadcrumb Navigation -->
-        <div class="flex items-center justify-center mt-10">
-          <div class="bg-[#fa1239] rounded px-6 py-2 flex items-center">
-            <span class="font-semibold text-white text-[15px] tracking-[0.60px]">Home</span>
-            <img src="/chevron-right.svg" class="w-4 h-4 mx-2" alt="chevron right" />
-            <span class="font-semibold text-white text-[15px] tracking-[0.60px]">Why Choose Us</span>
-          </div>
+            <!-- Breadcrumb Navigation -->
+            <div class="flex items-center justify-center mt-10">
+                <div class="bg-[#fa1239] rounded px-6 py-2 flex items-center">
+                    <span class="font-semibold text-white text-[15px] tracking-[0.60px]">Home</span>
+                    <img src="/chevron-right.svg" class="w-4 h-4 mx-2" alt="chevron right" />
+                    <span class="font-semibold text-white text-[15px] tracking-[0.60px]">Why Choose Us</span>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Main Content Section -->
     <section class="max-w-[1440px] mx-auto px-4 md:px-12 py-16">
-      <div class="flex flex-wrap">
-        <!-- Text Content -->
-        <div class="w-full lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
-          <h2 class="font-bold text-3xl md:text-[38.9px] leading-tight md:leading-[57.9px] tracking-[0.39px]">
-            <span class="text-[#032433]">Why a Manually Crafted Resume </span>
-            <span class="text-[#fa1239]">Beats AI</span>
-            <span class="text-[#032433]"> and Templates Every Time </span>
-          </h2>
+        <div class="flex flex-wrap">
+            <!-- Text Content -->
+            <div class="w-full lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
+                <h2 class="font-bold text-3xl md:text-[38.9px] leading-tight md:leading-[57.9px] tracking-[0.39px]">
+                    <span class="text-[#032433]">Why a Manually Crafted Resume </span>
+                    <span class="text-[#fa1239]">Beats AI</span>
+                    <span class="text-[#032433]"> and Templates Every Time </span>
+                </h2>
 
-          <h3 class="font-semibold text-[#032433] text-xl tracking-[0.20px] leading-[36.4px] mt-8">
-            If Your Resume Sounds Like Everyone Else's, It Won't Get You Anywhere.
-          </h3>
+                <h3 class="font-semibold text-[#032433] text-xl tracking-[0.20px] leading-[36.4px] mt-8">
+                    If Your Resume Sounds Like Everyone Else's, It Won't Get You Anywhere.
+                </h3>
 
-          <p class="font-normal text-[#032433] text-lg tracking-[0.18px] leading-[32.8px] mt-6">
-            In Today's Hyper-competitive Job Market, Using An Ai Tool Or Downloading A Generic Template Might Seem Like The Easy Fix. But Here's The Truth: Ai Doesn't Understand Your Career, Your Achievements, Or How Hiring Really Works. And Templates? They're Built For Speed—not Strategy.
-          </p>
-        </div>
-
-        <!-- Image Section -->
-        <div class="w-full lg:w-1/2 flex justify-center items-center">
-          <div class="relative w-full max-w-[448px] h-[389px]">
-            <div class="absolute w-[381px] h-[389px] top-0 left-0">
-              <img class="absolute w-[63px] h-10 top-[150px] left-[267px]" alt="Vector" src="/vector-216.svg" />
-              <img class="absolute w-[69px] h-10 top-[127px] left-[260px]" alt="Vector" src="/vector-217.svg" />
-              <div class="absolute w-[220px] h-[381px] top-2 left-[63px] rotate-180">
-                <img class="absolute w-[190px] h-[104px] top-[18px] left-0" alt="Resume template" src="/group.png" />
-              </div>
-              <img class="absolute w-[93px] h-[93px] top-0 left-0" alt="AI icon" src="/45822345316297287213937-1.svg" />
-              <img class="absolute w-[66px] h-[69px] top-[184px] left-[315px]" alt="Trash icon" src="/vector-2.svg" />
-              <div class="absolute top-[193px] left-[335px] rotate-[-25.85deg] font-semibold text-white text-[24.8px] text-center tracking-[0.99px]">
-                AI
-              </div>
+                <p class="font-normal text-[#032433] text-lg tracking-[0.18px] leading-[32.8px] mt-6">
+                    In Today's Hyper-competitive Job Market, Using An Ai Tool Or Downloading A Generic Template Might
+                    Seem Like The Easy Fix. But Here's The Truth: Ai Doesn't Understand Your Career, Your Achievements,
+                    Or How Hiring Really Works. And Templates? They're Built For Speed—not Strategy.
+                </p>
             </div>
-            <div class="absolute w-[133px] h-[98px] top-64 left-[315px]">
-              <img class="absolute w-[98px] h-[98px] top-0 left-0" alt="Person thinking" src="/layer-x0020-1.png" />
+
+            <!-- Image Section -->
+            <div class="w-full lg:w-1/2 flex justify-center items-center">
+                <div class="relative w-full max-w-[448px] h-[389px]">
+                    <div class="absolute w-[381px] h-[389px] top-0 left-0">
+                        <img class="absolute w-[63px] h-10 top-[150px] left-[267px]" alt="Vector"
+                            src="/vector-216.svg" />
+                        <img class="absolute w-[69px] h-10 top-[127px] left-[260px]" alt="Vector"
+                            src="/vector-217.svg" />
+                        <div class="absolute w-[220px] h-[381px] top-2 left-[63px] rotate-180">
+                            <img class="absolute w-[190px] h-[104px] top-[18px] left-0" alt="Resume template"
+                                src="/group.png" />
+                        </div>
+                        <img class="absolute w-[93px] h-[93px] top-0 left-0" alt="AI icon"
+                            src="/45822345316297287213937-1.svg" />
+                        <img class="absolute w-[66px] h-[69px] top-[184px] left-[315px]" alt="Trash icon"
+                            src="/vector-2.svg" />
+                        <div
+                            class="absolute top-[193px] left-[335px] rotate-[-25.85deg] font-semibold text-white text-[24.8px] text-center tracking-[0.99px]">
+                            AI
+                        </div>
+                    </div>
+                    <div class="absolute w-[133px] h-[98px] top-64 left-[315px]">
+                        <img class="absolute w-[98px] h-[98px] top-0 left-0" alt="Person thinking"
+                            src="/layer-x0020-1.png" />
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Features Section -->
     <section class="w-full bg-[#fa1239] py-12 mt-16">
-      <div class="max-w-[1440px] mx-auto px-4 md:px-12">
-        <h2 class="text-white font-semibold text-3xl md:text-4xl text-center tracking-[0.36px] leading-[65.5px] mb-6">
-          What You Need Is Strategy, Positioning, And Precision.
-        </h2>
-          <p class="text-white font-normal text-lg text-center tracking-[0.18px] leading-[32.8px] mb-12">
-          At ATS Resume, Every Resume Is Crafted By A Seasoned HR Professional Who Understands
-          </p>
+        <div class="max-w-[1440px] mx-auto px-4 md:px-12">
+            <h2
+                class="text-white font-semibold text-3xl md:text-4xl text-center tracking-[0.36px] leading-[65.5px] mb-6">
+                What You Need Is Strategy, Positioning, And Precision.
+            </h2>
+            <p class="text-white font-normal text-lg text-center tracking-[0.18px] leading-[32.8px] mb-12">
+                At ATS Resume, Every Resume Is Crafted By A Seasoned HR Professional Who Understands
+            </p>
 
         <!-- Feature Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -148,5 +186,7 @@
         </div>
       </div>
     </section>
-  </body>
+</body>
+<script src="index.js"></script>
+
 </html>
